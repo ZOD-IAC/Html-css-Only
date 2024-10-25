@@ -1,0 +1,87 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(26, 23, 50);
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.show {
+  background-color: whitesmoke;
+  box-shadow: -2px -2px 5px black inset;
+  color: black;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  transition: all 1s;
+}
+
+.show i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Container .optionList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 0;
+  overflow: hidden;
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  position: absolute;
+  top: 120%;
+}
+.optionList i {
+  background: crimson;
+  height: 2.5rem;
+  width: 2.5rem;
+  text-align: center;
+  line-height: 2.5rem;
+  border-radius: 50px;
+  color: white;
+  border: 2px solid transparent;
+  transition: all 0.6s;
+}
+
+.optionList i:nth-child(1) {
+  background: #000dff;
+}
+.optionList i:nth-child(2) {
+  background: red;
+}
+.optionList i:nth-child(3) {
+  background: green;
+}
+.optionList i:nth-child(4) {
+  background: orangered;
+}
+.Container:hover .show {
+  /* transform: rotateY(360deg); */
+  transform: rotate(180deg);
+}
+
+.optionList i:hover {
+  filter: saturate(10%);
+}
+.Container:hover .optionList {
+  height: 210px;
+}
