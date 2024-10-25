@@ -50,6 +50,7 @@ body {
   position: absolute;
   top: 120%;
 }
+
 .optionList i {
   background: crimson;
   height: 2.5rem;
@@ -74,11 +75,11 @@ body {
 .optionList i:nth-child(4) {
   background: orangered;
 }
+
 .Container:hover .show {
   /* transform: rotateY(360deg); */
   transform: rotate(180deg);
 }
-
 .optionList i:hover {
   filter: saturate(10%);
 }
