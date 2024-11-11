@@ -1,0 +1,80 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+* {
+  scrollbar-width: 0;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.container {
+  height: 60vh;
+  width: 20vw;
+  border-radius: 50px;
+  background: linear-gradient(120deg, gray, rgb(163, 161, 161));
+  background: url("./asset/2975471.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: #000000ab;
+  background-blend-mode: color-dodge;
+  padding: 2rem;
+  overflow: auto;
+  transition: all 2s;
+}
+
+h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  text-decoration: underline 2px;
+  text-underline-offset: 0.5rem;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+.list span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 50px;
+}
+
+.detail {
+  background: #ffffff9b;
+  border-radius: 10px;
+  padding: 0 1rem;
+  height: 0;
+  overflow: hidden;
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: auto;
+}
+
+.list:hover .detail {
+  height: 10rem;
+  padding: 0.5rem 1rem;
+}
+
+.container:hover {
+  box-shadow: 0px 0px 20px #fff;
+}
